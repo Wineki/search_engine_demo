@@ -1,6 +1,7 @@
 
 import os
 import json
+import pickle
 
 stop_words = set()
 all_word_dict = {}
@@ -78,6 +79,7 @@ def build_invert_index():
 def ask_for_searching():
     while True:
         search_key_words = input("Enter search key words: ")
+        print("=============================================")
         key_words = search_key_words.lower().split(" ")
         article_result = None
         for key_word in key_words:
